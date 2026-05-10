@@ -5,6 +5,7 @@ import laptopIcon from "./assets/ChatGPT Image Apr 30, 2026, 02_52_03 PM.png";
 // import { Link } from 'react-router-dom';
 import Categories from './components/CategoriesBoxes';
 import Footer from "./components/Footer";
+import Deals from './components/Deals';
 
 
 function App() {
@@ -16,8 +17,8 @@ function App() {
     <div style={{position:"relative"}} className="relative w-screen h-screen overflow-hidden hero-section
 ">
 
-     <h1 className="word-inside-hero" >Welcome to Neon-Tech</h1>
-      {/* Background */}
+ <h1 className="word-inside-hero" >Welcome to Neon-Tech</h1>
+
       <div className="absolute inset-0 -z-10">
         <MagicRings
           color="#A855F7"
@@ -43,6 +44,7 @@ function App() {
           parallax={0.05}
           clickBurst={false}
         />
+    <img src={laptopIcon} alt="laptop" className="laptop"  />
 
       </div>
 <div className="beside-heading">
@@ -56,12 +58,10 @@ function App() {
     Engineered for ultimate precision. Experience the breakthrough in neural processing and cinematic visuals.
   </h3>
 </div>
-    <img src={laptopIcon} alt="laptop" className="laptop"  />
-<Categories />
-
-
     </div>
+<Categories />
 </div>
+<Deals />
  <Footer />
 </>
   );

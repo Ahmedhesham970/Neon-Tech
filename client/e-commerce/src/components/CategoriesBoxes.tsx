@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaMobileAlt, FaLaptop, FaHeadphones, FaHackerNews, FaCreativeCommonsPdAlt } from "react-icons/fa";
+import { FaMobileAlt, FaLaptop, FaHeadphones, FaCreativeCommonsPdAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./CategoriesBoxes.css";
 
@@ -17,8 +17,11 @@ export default function Categories() {
     <>
 
     <div className="categories-section">
-     <div className="sentence-and-link-to-categories"> <h1 style={{color:'white',marginBottom:'20px'}}>Shop by Category</h1>
-      <Link  to="/categories" className="link-to-categories">ALL CATEGORIES</Link></div>
+     <div className="sentence-and-link-to-categories">
+    <div> <p className="sentence1">Shop by Category</p>
+    <p className="sentence">discover our wide range of products</p>
+    </div>
+      <Link  to="/categories" className="link-to-categories"> → ALL CATEGORIES </Link></div>
       <div
       className="categories-container"
       style={{
@@ -28,14 +31,14 @@ export default function Categories() {
       }}
       >
       {categories.map((cat, index) => (
-  <div
+  <Link to={`/categories/${cat.name.toLowerCase()}`} style={{ textDecoration: 'none' }}
     key={index}
     className="category"
     onMouseEnter={(e) =>
       (e.currentTarget.style.background =  `${cat.color}33`)
     }
     onMouseLeave={(e) =>
-      (e.currentTarget.style.background = "#1a1a1a")
+      (e.currentTarget.style.background = "rgb(17, 17, 17)")
     }
   >
     <div
@@ -48,7 +51,7 @@ export default function Categories() {
       {cat.icon}
     </div>
     <span style={{fontSize:"larger",color:'white'}}>{cat.name}</span>
-  </div>
+  </Link>
 ))}
     </div>
     </div>

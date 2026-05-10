@@ -5,6 +5,7 @@ body {
 }
 :root {
   --icon-st-color: #00f0ff;
+  --back-ground-color: rgb(17, 17, 17);
 }
 .App {
   width: 100%;
@@ -262,7 +263,7 @@ body {
   color: wheat;
   font-size: 25px;
   position: absolute;
-  top: 21%;
+  top:30%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -415,35 +416,4 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
-.categories {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 40px;
-}
-.all-categories-link {
-  text-decoration: none;
-  color: rgb(173 198 255 / var(--tw-text-opacity, 1));
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: translateX(8px);
-  }
-}
 
-.icon-inside-category {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #ff0000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: #710e0e;
-  filter: drop-shadow(0 0 4px #005bc1);
-}
-.icon-inside-box {
-  color: #00f0ff;
-  font-size: 40px;
-}
